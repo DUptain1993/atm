@@ -1,0 +1,4 @@
+# Fired on any successful Bjorn exploit module
+DELAY 800
+STRING echo pwned-by-bjorn-chain
+ENTER

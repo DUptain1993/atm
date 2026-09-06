@@ -1,0 +1,2568 @@
+[
+  {
+    "id": "ATM_0000",
+    "manufacturer": "NCR",
+    "model": "SelfServ 80",
+    "software_version": "Windows Embedded",
+    "location": "Train Station",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8915",
+        "category": "Race Condition",
+        "difficulty": "Very High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9873",
+        "category": "Privilege Escalation",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3342",
+        "category": "Race Condition",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm close",
+      "cdm status",
+      "cdm caps",
+      "cdm dispense 466 16",
+      "cdm reset",
+      "open CashDispenser_5"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.13954197056261172,
+    "cves": [
+      "CVE-2024-8915",
+      "CVE-2024-9873",
+      "CVE-2024-3342"
+    ],
+    "last_audit": "2026-06-19",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0001",
+    "manufacturer": "Hitachi",
+    "model": "SelfServ 90",
+    "software_version": "XFS 3.10",
+    "location": "Restaurant",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-2256",
+        "category": "Privilege Escalation",
+        "difficulty": "Very High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-4648",
+        "category": "Information Disclosure",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 2,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm reset",
+      "cdm dispense 451 15",
+      "open CashDispenser_4",
+      "cdm close",
+      "cdm status",
+      "cdm caps"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.604596435474119,
+    "cves": [
+      "CVE-2024-2256",
+      "CVE-2024-4648"
+    ],
+    "last_audit": "2026-05-04",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0002",
+    "manufacturer": "GRG Banking",
+    "model": "Wincor Cineo",
+    "software_version": "XFS 3.0",
+    "location": "Train Station",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8837",
+        "category": "Privilege Escalation",
+        "difficulty": "Very High",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3374",
+        "category": "SQL Injection",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 2,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm close",
+      "cdm caps",
+      "cdm status",
+      "cdm reset",
+      "open CashDispenser_1"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.2946334349749633,
+    "cves": [
+      "CVE-2024-8837",
+      "CVE-2024-3374"
+    ],
+    "last_audit": "2026-04-02",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0003",
+    "manufacturer": "OKI",
+    "model": "Serie 5000",
+    "software_version": "XFS 3.0",
+    "location": "Airport",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-5458",
+        "category": "Denial of Service",
+        "difficulty": "Low",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1148",
+        "category": "Information Disclosure",
+        "difficulty": "Low",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3388",
+        "category": "Denial of Service",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 3,
+    "attack_commands": [
+      "cdm dispense 80 15",
+      "cdm reset",
+      "cdm close"
+    ],
+    "command_count": 3,
+    "exploit_probability": 0.306125326130425,
+    "cves": [
+      "CVE-2024-5458",
+      "CVE-2024-1148",
+      "CVE-2024-3388"
+    ],
+    "last_audit": "2026-04-25",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0004",
+    "manufacturer": "Fujitsu",
+    "model": "GRG Wytron",
+    "software_version": "XFS 3.20",
+    "location": "Bank Branch",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9278",
+        "category": "Buffer Overflow",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1050",
+        "category": "SQL Injection",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3936",
+        "category": "Buffer Overflow",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-1492",
+        "category": "Command Injection",
+        "difficulty": "Low",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm close",
+      "cdm reset",
+      "cdm caps",
+      "cdm dispense 491 10",
+      "open CashDispenser_5"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.7455495329028847,
+    "cves": [
+      "CVE-2024-9278",
+      "CVE-2024-1050",
+      "CVE-2024-3936",
+      "CVE-2024-1492"
+    ],
+    "last_audit": "2026-06-30",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0005",
+    "manufacturer": "Wincor Nixdorf",
+    "model": "Serie 7000",
+    "software_version": "XFS 3.0",
+    "location": "Airport",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-3101",
+        "category": "Race Condition",
+        "difficulty": "Very High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-6005",
+        "category": "Denial of Service",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-6032",
+        "category": "Buffer Overflow",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-7464",
+        "category": "Privilege Escalation",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9217",
+        "category": "Privilege Escalation",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 5,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm caps",
+      "open CashDispenser_1",
+      "cdm dispense 230 4",
+      "cdm status",
+      "cdm reset",
+      "cdm close"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.32263436383135735,
+    "cves": [
+      "CVE-2024-3101",
+      "CVE-2024-6005",
+      "CVE-2024-6032",
+      "CVE-2024-7464",
+      "CVE-2024-9217"
+    ],
+    "last_audit": "2025-12-08",
+    "has_physical_access": true,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0006",
+    "manufacturer": "Wincor Nixdorf",
+    "model": "SelfServ 80",
+    "software_version": "Windows 10 IoT",
+    "location": "Bank Branch",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-7873",
+        "category": "Command Injection",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-7739",
+        "category": "Authentication Bypass",
+        "difficulty": "High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-7260",
+        "category": "SQL Injection",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-7310",
+        "category": "Remote Code Execution",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-6642",
+        "category": "Buffer Overflow",
+        "difficulty": "High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 5,
+    "critical_vulnerabilities": 2,
+    "attack_commands": [
+      "cdm close",
+      "cdm status",
+      "cdm reset",
+      "cdm caps",
+      "cdm dispense 452 6"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.42646110428380857,
+    "cves": [
+      "CVE-2024-7873",
+      "CVE-2024-7739",
+      "CVE-2024-7260",
+      "CVE-2024-7310",
+      "CVE-2024-6642"
+    ],
+    "last_audit": "2026-01-01",
+    "has_physical_access": true,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0007",
+    "manufacturer": "NCR",
+    "model": "Wincor Cineo",
+    "software_version": "Windows 7 SP1",
+    "location": "Restaurant",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-5455",
+        "category": "Authentication Bypass",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-3241",
+        "category": "Command Injection",
+        "difficulty": "Very High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-1086",
+        "category": "Denial of Service",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm dispense 97 17",
+      "open CashDispenser_2",
+      "cdm reset",
+      "cdm close",
+      "cdm caps"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.8306132858937639,
+    "cves": [
+      "CVE-2024-5455",
+      "CVE-2024-3241",
+      "CVE-2024-1086"
+    ],
+    "last_audit": "2026-04-03",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0008",
+    "manufacturer": "GRG Banking",
+    "model": "Hyosung 1500",
+    "software_version": "XFS 3.0",
+    "location": "Shopping Mall",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9499",
+        "category": "Information Disclosure",
+        "difficulty": "Low",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm reset",
+      "cdm status",
+      "open CashDispenser_4",
+      "cdm caps",
+      "cdm dispense 438 16",
+      "cdm close"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.1382840376683241,
+    "cves": [
+      "CVE-2024-9499"
+    ],
+    "last_audit": "2026-06-10",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0009",
+    "manufacturer": "NCR",
+    "model": "Serie 5000",
+    "software_version": "Windows Embedded",
+    "location": "Casino",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-7973",
+        "category": "Information Disclosure",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm caps",
+      "cdm dispense 230 1",
+      "cdm reset"
+    ],
+    "command_count": 3,
+    "exploit_probability": 0.6359615536314247,
+    "cves": [
+      "CVE-2024-7973"
+    ],
+    "last_audit": "2025-09-04",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0010",
+    "manufacturer": "Fujitsu",
+    "model": "Serie 5000",
+    "software_version": "Windows 7 SP1",
+    "location": "Convenience Store",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-2723",
+        "category": "Authentication Bypass",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-8668",
+        "category": "SQL Injection",
+        "difficulty": "Very High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 2,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm reset",
+      "cdm dispense 119 5",
+      "open CashDispenser_2",
+      "cdm status",
+      "cdm close"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.7923740351961096,
+    "cves": [
+      "CVE-2024-2723",
+      "CVE-2024-8668"
+    ],
+    "last_audit": "2026-01-01",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0011",
+    "manufacturer": "Wincor Nixdorf",
+    "model": "Hyosung 2100",
+    "software_version": "XFS 3.10",
+    "location": "Casino",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8273",
+        "category": "Denial of Service",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-7447",
+        "category": "Remote Code Execution",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1940",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm close",
+      "cdm caps",
+      "cdm status",
+      "cdm dispense 256 19",
+      "open CashDispenser_3"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.7313907638596154,
+    "cves": [
+      "CVE-2024-8273",
+      "CVE-2024-7447",
+      "CVE-2024-1940"
+    ],
+    "last_audit": "2026-03-17",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0012",
+    "manufacturer": "Fujitsu",
+    "model": "Wincor ProCash",
+    "software_version": "Windows 7 SP1",
+    "location": "Restaurant",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9640",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm dispense 358 10",
+      "cdm caps",
+      "open CashDispenser_1",
+      "cdm close",
+      "cdm status",
+      "cdm reset"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.7299929898113524,
+    "cves": [
+      "CVE-2024-9640"
+    ],
+    "last_audit": "2025-10-18",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0013",
+    "manufacturer": "OKI",
+    "model": "Wincor ProCash",
+    "software_version": "XFS 3.10",
+    "location": "Gas Station",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-1211",
+        "category": "SQL Injection",
+        "difficulty": "Very High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-2658",
+        "category": "Information Disclosure",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-6219",
+        "category": "SQL Injection",
+        "difficulty": "Low",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-3164",
+        "category": "Remote Code Execution",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-8752",
+        "category": "SQL Injection",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 5,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm close",
+      "cdm caps",
+      "cdm dispense 181 11",
+      "open CashDispenser_4"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.11219621467128205,
+    "cves": [
+      "CVE-2024-1211",
+      "CVE-2024-2658",
+      "CVE-2024-6219",
+      "CVE-2024-3164",
+      "CVE-2024-8752"
+    ],
+    "last_audit": "2025-09-09",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0014",
+    "manufacturer": "OKI",
+    "model": "Hyosung 2100",
+    "software_version": "XFS 3.20",
+    "location": "Airport",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-4762",
+        "category": "Denial of Service",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1971",
+        "category": "Information Disclosure",
+        "difficulty": "Low",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9399",
+        "category": "Command Injection",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm reset",
+      "cdm caps",
+      "cdm status",
+      "cdm dispense 154 5",
+      "open CashDispenser_4"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.6974864987757998,
+    "cves": [
+      "CVE-2024-4762",
+      "CVE-2024-1971",
+      "CVE-2024-9399"
+    ],
+    "last_audit": "2025-10-10",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0015",
+    "manufacturer": "GRG Banking",
+    "model": "GRG Wytron",
+    "software_version": "XFS 3.20",
+    "location": "Hotel",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8826",
+        "category": "Remote Code Execution",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-3906",
+        "category": "Privilege Escalation",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-8578",
+        "category": "Authentication Bypass",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-5465",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-5533",
+        "category": "Information Disclosure",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 5,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm reset",
+      "cdm close",
+      "cdm caps",
+      "cdm status",
+      "open CashDispenser_5",
+      "cdm dispense 363 4"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.5486494055088945,
+    "cves": [
+      "CVE-2024-8826",
+      "CVE-2024-3906",
+      "CVE-2024-8578",
+      "CVE-2024-5465",
+      "CVE-2024-5533"
+    ],
+    "last_audit": "2025-12-23",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0016",
+    "manufacturer": "Wincor Nixdorf",
+    "model": "SelfServ 36",
+    "software_version": "XFS 3.0",
+    "location": "Bank Branch",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-3185",
+        "category": "Privilege Escalation",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1550",
+        "category": "SQL Injection",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-4636",
+        "category": "Race Condition",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-3834",
+        "category": "Authentication Bypass",
+        "difficulty": "Very High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-7927",
+        "category": "Remote Code Execution",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 5,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm caps",
+      "cdm reset",
+      "cdm dispense 301 19",
+      "open CashDispenser_2",
+      "cdm close"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.4168965854171972,
+    "cves": [
+      "CVE-2024-3185",
+      "CVE-2024-1550",
+      "CVE-2024-4636",
+      "CVE-2024-3834",
+      "CVE-2024-7927"
+    ],
+    "last_audit": "2026-05-02",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0017",
+    "manufacturer": "Wincor Nixdorf",
+    "model": "Hyosung 1500",
+    "software_version": "XFS 3.20",
+    "location": "Shopping Mall",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-2731",
+        "category": "Remote Code Execution",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm reset",
+      "cdm status",
+      "cdm close",
+      "open CashDispenser_5"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.4745167623675467,
+    "cves": [
+      "CVE-2024-2731"
+    ],
+    "last_audit": "2026-06-07",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0018",
+    "manufacturer": "Diebold Nixdorf",
+    "model": "SelfServ 34",
+    "software_version": "XFS 3.0",
+    "location": "Restaurant",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9049",
+        "category": "Privilege Escalation",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9876",
+        "category": "Command Injection",
+        "difficulty": "Very High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 2,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm reset",
+      "cdm status",
+      "cdm close",
+      "open CashDispenser_5"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.5972463007536563,
+    "cves": [
+      "CVE-2024-9049",
+      "CVE-2024-9876"
+    ],
+    "last_audit": "2026-05-02",
+    "has_physical_access": true,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0019",
+    "manufacturer": "Wincor Nixdorf",
+    "model": "Serie 5000",
+    "software_version": "Windows Embedded",
+    "location": "Bank Branch",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-3786",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-7053",
+        "category": "Information Disclosure",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 2,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm status",
+      "cdm dispense 381 16",
+      "cdm caps",
+      "cdm close"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.3827452898341156,
+    "cves": [
+      "CVE-2024-3786",
+      "CVE-2024-7053"
+    ],
+    "last_audit": "2026-01-15",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0020",
+    "manufacturer": "Fujitsu",
+    "model": "SelfServ 34",
+    "software_version": "XFS 2.0",
+    "location": "Bank Branch",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8278",
+        "category": "Denial of Service",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm reset",
+      "open CashDispenser_1",
+      "cdm dispense 89 15",
+      "cdm close"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.654000382537207,
+    "cves": [
+      "CVE-2024-8278"
+    ],
+    "last_audit": "2026-06-15",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0021",
+    "manufacturer": "Hyosung",
+    "model": "SelfServ 36",
+    "software_version": "XFS 3.10",
+    "location": "Airport",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8553",
+        "category": "Authentication Bypass",
+        "difficulty": "Low",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-5857",
+        "category": "Buffer Overflow",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-6629",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-6097",
+        "category": "Remote Code Execution",
+        "difficulty": "Very High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm status",
+      "cdm reset",
+      "cdm caps",
+      "open CashDispenser_1",
+      "cdm dispense 103 5"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.45682007712466344,
+    "cves": [
+      "CVE-2024-8553",
+      "CVE-2024-5857",
+      "CVE-2024-6629",
+      "CVE-2024-6097"
+    ],
+    "last_audit": "2026-04-09",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0022",
+    "manufacturer": "Hyosung",
+    "model": "Serie 2000",
+    "software_version": "Windows 10 IoT",
+    "location": "Convenience Store",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-5392",
+        "category": "Information Disclosure",
+        "difficulty": "High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm reset",
+      "cdm status",
+      "cdm dispense 69 8",
+      "cdm caps"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.6626917598608318,
+    "cves": [
+      "CVE-2024-5392"
+    ],
+    "last_audit": "2025-11-26",
+    "has_physical_access": true,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0023",
+    "manufacturer": "GRG Banking",
+    "model": "SelfServ 90",
+    "software_version": "Windows 7 SP1",
+    "location": "Airport",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9140",
+        "category": "Command Injection",
+        "difficulty": "Low",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm status",
+      "cdm caps",
+      "cdm close",
+      "open CashDispenser_4",
+      "cdm dispense 186 9"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.28537736135088254,
+    "cves": [
+      "CVE-2024-9140"
+    ],
+    "last_audit": "2026-06-17",
+    "has_physical_access": true,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0024",
+    "manufacturer": "Hitachi",
+    "model": "SelfServ 80",
+    "software_version": "XFS 2.0",
+    "location": "Convenience Store",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-3808",
+        "category": "Remote Code Execution",
+        "difficulty": "Very High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-5495",
+        "category": "Privilege Escalation",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-5203",
+        "category": "SQL Injection",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm close",
+      "cdm dispense 457 11",
+      "open CashDispenser_1",
+      "cdm caps",
+      "cdm status",
+      "cdm reset"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.20822028199009282,
+    "cves": [
+      "CVE-2024-3808",
+      "CVE-2024-5495",
+      "CVE-2024-5203"
+    ],
+    "last_audit": "2026-01-21",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0025",
+    "manufacturer": "Hyosung",
+    "model": "SelfServ 90",
+    "software_version": "Windows Embedded",
+    "location": "Bank Branch",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-6773",
+        "category": "Information Disclosure",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-1454",
+        "category": "Race Condition",
+        "difficulty": "Very High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 2,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm dispense 405 14",
+      "cdm caps",
+      "cdm close",
+      "cdm status",
+      "open CashDispenser_1",
+      "cdm reset"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.2676679469106076,
+    "cves": [
+      "CVE-2024-6773",
+      "CVE-2024-1454"
+    ],
+    "last_audit": "2025-11-02",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0026",
+    "manufacturer": "Diebold Nixdorf",
+    "model": "Serie 2000",
+    "software_version": "XFS 2.0",
+    "location": "Restaurant",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-6316",
+        "category": "Command Injection",
+        "difficulty": "High",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-7258",
+        "category": "Race Condition",
+        "difficulty": "High",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-7992",
+        "category": "Remote Code Execution",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-1777",
+        "category": "Buffer Overflow",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm status",
+      "cdm close",
+      "open CashDispenser_4",
+      "cdm reset"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.8345532826247944,
+    "cves": [
+      "CVE-2024-6316",
+      "CVE-2024-7258",
+      "CVE-2024-7992",
+      "CVE-2024-1777"
+    ],
+    "last_audit": "2025-09-12",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0027",
+    "manufacturer": "Hyosung",
+    "model": "GRG Wytron",
+    "software_version": "XFS 3.0",
+    "location": "Airport",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-5403",
+        "category": "SQL Injection",
+        "difficulty": "Very High",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3289",
+        "category": "Buffer Overflow",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-2173",
+        "category": "Race Condition",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm caps",
+      "cdm dispense 373 5",
+      "cdm close",
+      "cdm reset",
+      "cdm status"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.6673519276457519,
+    "cves": [
+      "CVE-2024-5403",
+      "CVE-2024-3289",
+      "CVE-2024-2173"
+    ],
+    "last_audit": "2025-10-19",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0028",
+    "manufacturer": "NCR",
+    "model": "Serie 2000",
+    "software_version": "XFS 3.10",
+    "location": "Hotel",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-1497",
+        "category": "Privilege Escalation",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-2860",
+        "category": "Remote Code Execution",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-2830",
+        "category": "Authentication Bypass",
+        "difficulty": "Low",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-8492",
+        "category": "Information Disclosure",
+        "difficulty": "Very High",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1959",
+        "category": "Buffer Overflow",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 5,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm status",
+      "open CashDispenser_4",
+      "cdm reset",
+      "cdm dispense 339 6",
+      "cdm caps"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.7619679705973921,
+    "cves": [
+      "CVE-2024-1497",
+      "CVE-2024-2860",
+      "CVE-2024-2830",
+      "CVE-2024-8492",
+      "CVE-2024-1959"
+    ],
+    "last_audit": "2025-10-29",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0029",
+    "manufacturer": "Diebold Nixdorf",
+    "model": "SelfServ 34",
+    "software_version": "Windows 10 IoT",
+    "location": "Restaurant",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9780",
+        "category": "Privilege Escalation",
+        "difficulty": "High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-5169",
+        "category": "Remote Code Execution",
+        "difficulty": "Very High",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1860",
+        "category": "Authentication Bypass",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-5959",
+        "category": "Command Injection",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "open CashDispenser_2",
+      "cdm close",
+      "cdm status"
+    ],
+    "command_count": 3,
+    "exploit_probability": 0.3975456482416021,
+    "cves": [
+      "CVE-2024-9780",
+      "CVE-2024-5169",
+      "CVE-2024-1860",
+      "CVE-2024-5959"
+    ],
+    "last_audit": "2026-02-04",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0030",
+    "manufacturer": "NCR",
+    "model": "Serie 2000",
+    "software_version": "Windows Embedded",
+    "location": "Casino",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-2514",
+        "category": "Denial of Service",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-1801",
+        "category": "Command Injection",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 2,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm reset",
+      "cdm close",
+      "cdm caps",
+      "open CashDispenser_5",
+      "cdm status"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.8164349620187391,
+    "cves": [
+      "CVE-2024-2514",
+      "CVE-2024-1801"
+    ],
+    "last_audit": "2026-05-02",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0031",
+    "manufacturer": "NCR",
+    "model": "Serie 2000",
+    "software_version": "XFS 4.0",
+    "location": "Shopping Mall",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-4534",
+        "category": "Information Disclosure",
+        "difficulty": "Very High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3149",
+        "category": "Authentication Bypass",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-8384",
+        "category": "Race Condition",
+        "difficulty": "Very High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-4285",
+        "category": "Denial of Service",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 2,
+    "attack_commands": [
+      "cdm status",
+      "cdm dispense 471 14",
+      "cdm caps",
+      "open CashDispenser_1",
+      "cdm reset",
+      "cdm close"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.5056541184305322,
+    "cves": [
+      "CVE-2024-4534",
+      "CVE-2024-3149",
+      "CVE-2024-8384",
+      "CVE-2024-4285"
+    ],
+    "last_audit": "2025-09-22",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0032",
+    "manufacturer": "NCR",
+    "model": "Serie 5000",
+    "software_version": "XFS 4.0",
+    "location": "Hotel",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-5111",
+        "category": "Information Disclosure",
+        "difficulty": "Low",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9410",
+        "category": "Race Condition",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-8976",
+        "category": "Buffer Overflow",
+        "difficulty": "Low",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3952",
+        "category": "Denial of Service",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm reset",
+      "cdm close",
+      "cdm caps"
+    ],
+    "command_count": 3,
+    "exploit_probability": 0.6934544577132502,
+    "cves": [
+      "CVE-2024-5111",
+      "CVE-2024-9410",
+      "CVE-2024-8976",
+      "CVE-2024-3952"
+    ],
+    "last_audit": "2026-04-12",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0033",
+    "manufacturer": "NCR",
+    "model": "Serie 5000",
+    "software_version": "XFS 3.20",
+    "location": "Casino",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8130",
+        "category": "Buffer Overflow",
+        "difficulty": "High",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3501",
+        "category": "Privilege Escalation",
+        "difficulty": "Low",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-9925",
+        "category": "Authentication Bypass",
+        "difficulty": "Low",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9071",
+        "category": "SQL Injection",
+        "difficulty": "Very High",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 2,
+    "attack_commands": [
+      "cdm dispense 156 7",
+      "open CashDispenser_2",
+      "cdm reset"
+    ],
+    "command_count": 3,
+    "exploit_probability": 0.22378600143030233,
+    "cves": [
+      "CVE-2024-8130",
+      "CVE-2024-3501",
+      "CVE-2024-9925",
+      "CVE-2024-9071"
+    ],
+    "last_audit": "2025-11-03",
+    "has_physical_access": true,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0034",
+    "manufacturer": "Fujitsu",
+    "model": "Serie 2000",
+    "software_version": "XFS 3.10",
+    "location": "Shopping Mall",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-3936",
+        "category": "Command Injection",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-7460",
+        "category": "Command Injection",
+        "difficulty": "Very High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-7058",
+        "category": "Remote Code Execution",
+        "difficulty": "High",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-3635",
+        "category": "Remote Code Execution",
+        "difficulty": "Low",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 2,
+    "attack_commands": [
+      "cdm status",
+      "cdm reset",
+      "cdm close",
+      "cdm dispense 205 19"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.6874120879665366,
+    "cves": [
+      "CVE-2024-3936",
+      "CVE-2024-7460",
+      "CVE-2024-7058",
+      "CVE-2024-3635"
+    ],
+    "last_audit": "2025-11-10",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0035",
+    "manufacturer": "Hyosung",
+    "model": "GRG Wytron",
+    "software_version": "Windows Embedded",
+    "location": "Shopping Mall",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-2704",
+        "category": "Authentication Bypass",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm status",
+      "open CashDispenser_1",
+      "cdm caps",
+      "cdm close"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.36450599504583536,
+    "cves": [
+      "CVE-2024-2704"
+    ],
+    "last_audit": "2026-04-09",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0036",
+    "manufacturer": "Wincor Nixdorf",
+    "model": "SelfServ 80",
+    "software_version": "XFS 2.0",
+    "location": "Gas Station",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-5624",
+        "category": "Authentication Bypass",
+        "difficulty": "Very High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-3206",
+        "category": "Command Injection",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9551",
+        "category": "Information Disclosure",
+        "difficulty": "Very High",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 2,
+    "attack_commands": [
+      "cdm status",
+      "cdm close",
+      "open CashDispenser_3"
+    ],
+    "command_count": 3,
+    "exploit_probability": 0.5049356205429757,
+    "cves": [
+      "CVE-2024-5624",
+      "CVE-2024-3206",
+      "CVE-2024-9551"
+    ],
+    "last_audit": "2026-04-29",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0037",
+    "manufacturer": "Hyosung",
+    "model": "Serie 7000",
+    "software_version": "Windows Embedded",
+    "location": "Train Station",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-1891",
+        "category": "Denial of Service",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-5461",
+        "category": "Remote Code Execution",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9851",
+        "category": "Command Injection",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm dispense 153 20",
+      "cdm close",
+      "cdm reset"
+    ],
+    "command_count": 3,
+    "exploit_probability": 0.8143846904191414,
+    "cves": [
+      "CVE-2024-1891",
+      "CVE-2024-5461",
+      "CVE-2024-9851"
+    ],
+    "last_audit": "2026-01-26",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0038",
+    "manufacturer": "GRG Banking",
+    "model": "Hyosung 1500",
+    "software_version": "XFS 4.0",
+    "location": "Train Station",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9371",
+        "category": "Race Condition",
+        "difficulty": "Very High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-7345",
+        "category": "Remote Code Execution",
+        "difficulty": "Very High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-9304",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-6278",
+        "category": "Buffer Overflow",
+        "difficulty": "Low",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 2,
+    "attack_commands": [
+      "cdm status",
+      "cdm reset",
+      "open CashDispenser_2",
+      "cdm close",
+      "cdm caps"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.8806220037137961,
+    "cves": [
+      "CVE-2024-9371",
+      "CVE-2024-7345",
+      "CVE-2024-9304",
+      "CVE-2024-6278"
+    ],
+    "last_audit": "2026-02-22",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0039",
+    "manufacturer": "NCR",
+    "model": "Hyosung 2100",
+    "software_version": "XFS 3.10",
+    "location": "Bank Branch",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-4219",
+        "category": "Command Injection",
+        "difficulty": "Low",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-8999",
+        "category": "SQL Injection",
+        "difficulty": "Low",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-5630",
+        "category": "Remote Code Execution",
+        "difficulty": "High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 2,
+    "attack_commands": [
+      "open CashDispenser_4",
+      "cdm close",
+      "cdm reset",
+      "cdm caps"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.6329180707748757,
+    "cves": [
+      "CVE-2024-4219",
+      "CVE-2024-8999",
+      "CVE-2024-5630"
+    ],
+    "last_audit": "2026-03-30",
+    "has_physical_access": true,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0040",
+    "manufacturer": "GRG Banking",
+    "model": "Serie 7000",
+    "software_version": "Windows Embedded",
+    "location": "Hotel",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-4157",
+        "category": "Denial of Service",
+        "difficulty": "Low",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-9483",
+        "category": "Remote Code Execution",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-1023",
+        "category": "Command Injection",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm status",
+      "cdm reset",
+      "cdm close",
+      "cdm caps",
+      "cdm dispense 314 4"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.1098825064061547,
+    "cves": [
+      "CVE-2024-4157",
+      "CVE-2024-9483",
+      "CVE-2024-1023"
+    ],
+    "last_audit": "2025-12-16",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0041",
+    "manufacturer": "OKI",
+    "model": "Serie 7000",
+    "software_version": "XFS 4.0",
+    "location": "Hotel",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-7702",
+        "category": "Information Disclosure",
+        "difficulty": "Very High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm caps",
+      "cdm reset",
+      "cdm close",
+      "cdm dispense 335 14",
+      "open CashDispenser_5"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.29273684731318195,
+    "cves": [
+      "CVE-2024-7702"
+    ],
+    "last_audit": "2026-02-02",
+    "has_physical_access": true,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0042",
+    "manufacturer": "GRG Banking",
+    "model": "SelfServ 34",
+    "software_version": "Windows 10 IoT",
+    "location": "Hotel",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8777",
+        "category": "Race Condition",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1923",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-5219",
+        "category": "Command Injection",
+        "difficulty": "High",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-8719",
+        "category": "SQL Injection",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm close",
+      "cdm reset",
+      "cdm dispense 365 15",
+      "cdm caps",
+      "open CashDispenser_5",
+      "cdm status"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.25007634634828824,
+    "cves": [
+      "CVE-2024-8777",
+      "CVE-2024-1923",
+      "CVE-2024-5219",
+      "CVE-2024-8719"
+    ],
+    "last_audit": "2026-01-30",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0043",
+    "manufacturer": "OKI",
+    "model": "Serie 5000",
+    "software_version": "XFS 4.0",
+    "location": "Hotel",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9998",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-3490",
+        "category": "Information Disclosure",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-8182",
+        "category": "SQL Injection",
+        "difficulty": "Low",
+        "impact": "High",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-5710",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "open CashDispenser_3",
+      "cdm caps",
+      "cdm dispense 108 4",
+      "cdm reset",
+      "cdm status",
+      "cdm close"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.8466331074495951,
+    "cves": [
+      "CVE-2024-9998",
+      "CVE-2024-3490",
+      "CVE-2024-8182",
+      "CVE-2024-5710"
+    ],
+    "last_audit": "2026-03-11",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0044",
+    "manufacturer": "OKI",
+    "model": "Serie 7000",
+    "software_version": "Windows 7 SP1",
+    "location": "Restaurant",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-9140",
+        "category": "Information Disclosure",
+        "difficulty": "Very High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-6237",
+        "category": "Buffer Overflow",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-7276",
+        "category": "SQL Injection",
+        "difficulty": "Medium",
+        "impact": "Critical",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 3,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm close",
+      "cdm caps",
+      "cdm status",
+      "cdm dispense 319 5"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.13001092640759968,
+    "cves": [
+      "CVE-2024-9140",
+      "CVE-2024-6237",
+      "CVE-2024-7276"
+    ],
+    "last_audit": "2026-02-15",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0045",
+    "manufacturer": "Hitachi",
+    "model": "Hyosung 1500",
+    "software_version": "Windows 7 SP1",
+    "location": "Convenience Store",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-7550",
+        "category": "Information Disclosure",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-4508",
+        "category": "Race Condition",
+        "difficulty": "Medium",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-5436",
+        "category": "Race Condition",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-3453",
+        "category": "Authentication Bypass",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm status",
+      "cdm dispense 308 3",
+      "cdm reset",
+      "open CashDispenser_4",
+      "cdm caps"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.5051428153504153,
+    "cves": [
+      "CVE-2024-7550",
+      "CVE-2024-4508",
+      "CVE-2024-5436",
+      "CVE-2024-3453"
+    ],
+    "last_audit": "2025-12-05",
+    "has_physical_access": true,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0046",
+    "manufacturer": "Hitachi",
+    "model": "SelfServ 80",
+    "software_version": "Windows Embedded",
+    "location": "Bank Branch",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-1507",
+        "category": "Race Condition",
+        "difficulty": "High",
+        "impact": "Critical",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-9196",
+        "category": "Race Condition",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 2,
+    "critical_vulnerabilities": 1,
+    "attack_commands": [
+      "cdm status",
+      "cdm dispense 118 15",
+      "cdm reset",
+      "cdm caps"
+    ],
+    "command_count": 4,
+    "exploit_probability": 0.7740061908333152,
+    "cves": [
+      "CVE-2024-1507",
+      "CVE-2024-9196"
+    ],
+    "last_audit": "2026-03-30",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0047",
+    "manufacturer": "Wincor Nixdorf",
+    "model": "Serie 5000",
+    "software_version": "Windows Embedded",
+    "location": "Airport",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-5712",
+        "category": "Buffer Overflow",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-4087",
+        "category": "Race Condition",
+        "difficulty": "Low",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-8200",
+        "category": "SQL Injection",
+        "difficulty": "Medium",
+        "impact": "Low",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-1218",
+        "category": "Remote Code Execution",
+        "difficulty": "High",
+        "impact": "High",
+        "exploit_public": true,
+        "patch_available": false
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm status",
+      "cdm close",
+      "cdm dispense 286 4",
+      "cdm reset",
+      "open CashDispenser_5"
+    ],
+    "command_count": 5,
+    "exploit_probability": 0.2886440818128694,
+    "cves": [
+      "CVE-2024-5712",
+      "CVE-2024-4087",
+      "CVE-2024-8200",
+      "CVE-2024-1218"
+    ],
+    "last_audit": "2025-09-12",
+    "has_physical_access": false,
+    "network_accessible": false
+  },
+  {
+    "id": "ATM_0048",
+    "manufacturer": "Fujitsu",
+    "model": "Wincor ProCash",
+    "software_version": "XFS 4.0",
+    "location": "Train Station",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8760",
+        "category": "Privilege Escalation",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-1657",
+        "category": "Authentication Bypass",
+        "difficulty": "Low",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      },
+      {
+        "cve_id": "CVE-2024-6978",
+        "category": "Authentication Bypass",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": false
+      },
+      {
+        "cve_id": "CVE-2024-1162",
+        "category": "Information Disclosure",
+        "difficulty": "High",
+        "impact": "Medium",
+        "exploit_public": false,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 4,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm reset",
+      "cdm dispense 300 1",
+      "cdm status"
+    ],
+    "command_count": 3,
+    "exploit_probability": 0.7872944407374627,
+    "cves": [
+      "CVE-2024-8760",
+      "CVE-2024-1657",
+      "CVE-2024-6978",
+      "CVE-2024-1162"
+    ],
+    "last_audit": "2025-10-20",
+    "has_physical_access": false,
+    "network_accessible": true
+  },
+  {
+    "id": "ATM_0049",
+    "manufacturer": "NCR",
+    "model": "Hyosung 1500",
+    "software_version": "XFS 4.0",
+    "location": "Casino",
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2024-8242",
+        "category": "Command Injection",
+        "difficulty": "High",
+        "impact": "Low",
+        "exploit_public": true,
+        "patch_available": true
+      }
+    ],
+    "vulnerability_count": 1,
+    "critical_vulnerabilities": 0,
+    "attack_commands": [
+      "cdm reset",
+      "cdm close",
+      "cdm caps",
+      "cdm dispense 220 14",
+      "open CashDispenser_5",
+      "cdm status"
+    ],
+    "command_count": 6,
+    "exploit_probability": 0.5214035400225361,
+    "cves": [
+      "CVE-2024-8242"
+    ],
+    "last_audit": "2025-12-13",
+    "has_physical_access": true,
+    "network_accessible": false
+  }
+]

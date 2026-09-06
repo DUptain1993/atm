@@ -1,0 +1,4618 @@
+[
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Session Replay",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8622437284321701,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Network-based remote exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9425447116796206,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Network-based remote exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7931998370349223,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Firmware corruption",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7636327364134485,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Session Replay",
+    "vector": "Firmware corruption",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7772594467696528,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Session Replay",
+    "vector": "Software vulnerability exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8810044510166877,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Race Condition",
+    "vector": "Software vulnerability exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7668223803867271,
+    "complexity": "High",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Denial of Service",
+    "vector": "Protocol manipulation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8943391689282081,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Firmware corruption",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8964818372198196,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "Denial of Service",
+    "vector": "Network-based remote exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.75019477319419,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8575106018019815,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Session Replay",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9326005971478509,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Command Injection",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.896619829386582,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8804250018832968,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "Race Condition",
+    "vector": "Firmware corruption",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7075446202379188,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Denial of Service",
+    "vector": "Network-based remote exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9008441471163829,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Command Injection",
+    "vector": "Firmware corruption",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7640854786077727,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Race Condition",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.9236205987120845,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Firmware corruption",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.9004127018501277,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Network-based remote exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7495967000227083,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7107295100021188,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7793478585096205,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Denial of Service",
+    "vector": "Protocol manipulation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8074848486401415,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Race Condition",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8563076100133504,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Race Condition",
+    "vector": "Physical USB injection",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.946900256677041,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8071935379066215,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "State Confusion",
+    "vector": "Physical USB injection",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7703987543020323,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Firmware corruption",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8781336265421207,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "State Confusion",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8729330630848677,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "State Confusion",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9470089992721027,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Denial of Service",
+    "vector": "Protocol manipulation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9463831541786345,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Denial of Service",
+    "vector": "Network-based remote exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7076778751396481,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Command Injection",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7227112002488258,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Race Condition",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7348451907754671,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Network-based remote exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9181353222525666,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Network-based remote exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.804500716123602,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Denial of Service",
+    "vector": "Physical USB injection",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7856059822490802,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Command Injection",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8277946008205649,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Race Condition",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9134938031817235,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Denial of Service",
+    "vector": "Firmware corruption",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8030719361872265,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Race Condition",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7447507965712077,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Session Replay",
+    "vector": "Firmware corruption",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.9062177742325035,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Session Replay",
+    "vector": "Firmware corruption",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8411275766458015,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Physical USB injection",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8302217202796582,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Session Replay",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7306482890040111,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Firmware corruption",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7498938005129949,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Race Condition",
+    "vector": "Network-based remote exploitation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8767718825467858,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Denial of Service",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7569459248184794,
+    "complexity": "High",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7048721947700796,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Race Condition",
+    "vector": "Firmware corruption",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9183829668916474,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Denial of Service",
+    "vector": "Network-based remote exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8303072230895311,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7361146707284532,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Session Replay",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8572316483788655,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Command Injection",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8854683874805773,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Session Replay",
+    "vector": "Firmware corruption",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8957863669103984,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Network-based remote exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7817548882729797,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Protocol manipulation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.760137263241782,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Session Replay",
+    "vector": "Network-based remote exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.9300040189849574,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "Race Condition",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8635506753105243,
+    "complexity": "High",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Race Condition",
+    "vector": "Firmware corruption",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7440948526821879,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Denial of Service",
+    "vector": "Physical USB injection",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7992783721245182,
+    "complexity": "High",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Software vulnerability exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.792497906678007,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Physical USB injection",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7456532145319479,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "State Confusion",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.818197143330938,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "State Confusion",
+    "vector": "Network-based remote exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7442626824616057,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Session Replay",
+    "vector": "Protocol manipulation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.740249838987503,
+    "complexity": "Medium",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Session Replay",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.751918342598985,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "Denial of Service",
+    "vector": "Software vulnerability exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8988919112048521,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Command Injection",
+    "vector": "Physical USB injection",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.784596086256937,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Firmware corruption",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7984552228322642,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "State Confusion",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.9412898098730553,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7381442103237875,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Physical USB injection",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.870052610450775,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_denial_bypass_20260828_085518",
+    "target": "ATM",
+    "pattern": "denial_bypass",
+    "vulnerability": "Command Injection",
+    "vector": "Protocol manipulation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Deny transaction",
+        "command": "cdm deny",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Confirm transaction",
+        "command": "cdm confirm",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7751629322441013,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Session Replay",
+    "vector": "Protocol manipulation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8862537171008262,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Protocol manipulation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8086564152144224,
+    "complexity": "High",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Session Replay",
+    "vector": "Protocol manipulation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7948970141875781,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Command Injection",
+    "vector": "Network-based remote exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8792706927435272,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "State Confusion",
+    "vector": "Protocol manipulation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8947220349842511,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Session Replay",
+    "vector": "Protocol manipulation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8711981580255044,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9112544208850388,
+    "complexity": "High",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Physical USB injection",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7818311691015081,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "State Confusion",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9323166408882597,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8115053337556907,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "State Confusion",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9319442947881846,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Denial of Service",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9478096797920321,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.840204667902784,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "State Confusion",
+    "vector": "Network-based remote exploitation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.825313278443691,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Network-based remote exploitation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8101198161114024,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "Race Condition",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7211682550159932,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Authentication Bypass",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9325099647082821,
+    "complexity": "High",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_bypass_reset_20260828_085518",
+    "target": "ATM",
+    "pattern": "bypass_reset",
+    "vulnerability": "Command Injection",
+    "vector": "Software vulnerability exploitation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense more",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.875514820199584,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Network-based remote exploitation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.7959027235406967,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Session Replay",
+    "vector": "Network-based remote exploitation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7158156203475274,
+    "complexity": "Medium",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "Race Condition",
+    "vector": "Protocol manipulation",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8218178031257715,
+    "complexity": "Low",
+    "detection_risk": "High"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "Buffer Overflow",
+    "vector": "Physical USB injection",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7308165544172311,
+    "complexity": "High",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_state_overflow_20260828_085518",
+    "target": "ATM",
+    "pattern": "state_overflow",
+    "vulnerability": "State Confusion",
+    "vector": "Protocol manipulation",
+    "severity": "High",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Open connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.8254737590566069,
+    "complexity": "High",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_rapid_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "rapid_dispense",
+    "vulnerability": "Parameter Manipulation",
+    "vector": "Physical USB injection",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 5,
+    "success_rate": 0.9080811584216382,
+    "complexity": "Medium",
+    "detection_risk": "Medium"
+  },
+  {
+    "id": "atm_attack_classic_dispense_20260828_085518",
+    "target": "ATM",
+    "pattern": "classic_dispense",
+    "vulnerability": "State Confusion",
+    "vector": "Protocol manipulation",
+    "severity": "Medium",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Get capabilities",
+        "command": "cdm caps",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Reset device",
+        "command": "cdm reset",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense cash",
+        "command": "cdm dispense 100 20",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.8064189645785312,
+    "complexity": "Low",
+    "detection_risk": "Low"
+  },
+  {
+    "id": "atm_attack_stealth_mode_20260828_085518",
+    "target": "ATM",
+    "pattern": "stealth_mode",
+    "vulnerability": "Race Condition",
+    "vector": "Firmware corruption",
+    "severity": "Critical",
+    "commands": [
+      {
+        "step": "Open XFS connection",
+        "command": "open CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Check status",
+        "command": "cdm status",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Dispense small",
+        "command": "cdm dispense 50 10",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      },
+      {
+        "step": "Close connection",
+        "command": "close CashDispenser_1",
+        "success_criteria": "No error returned",
+        "expected_output": "Command executed successfully"
+      }
+    ],
+    "command_count": 6,
+    "success_rate": 0.7871685552150367,
+    "complexity": "Low",
+    "detection_risk": "Medium"
+  }
+]

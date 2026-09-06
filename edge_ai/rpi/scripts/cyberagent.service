@@ -1,0 +1,16 @@
+[Unit]
+Description=CyberAgent Offensive Recon & Exploit Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/cyberagent
+ExecStart=/usr/bin/python3 /opt/cyberagent/agent/main.py --enable-gadget --enable-network-delivery
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

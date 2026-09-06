@@ -1,0 +1,11 @@
+Pillow>=10.4.0
+psutil>=5.9.8
+pyyaml>=6.0.1
+paramiko>=3.4.0
+spidev>=3.6; platform_machine == "armv6l" or platform_machine == "armv7l" or platform_machine == "aarch64"
+RPi.GPIO>=0.7.1; platform_machine == "armv6l" or platform_machine == "armv7l" or platform_machine == "aarch64"
+# System packages on Pi (apt): aircrack-ng sshpass iw
+# Waveshare e-Paper Python library (install from vendor repo on device):
+#   git clone https://github.com/waveshare/e-Paper.git
+#   cd e-Paper/RaspberryPi_JetsonNano/python
+#   sudo python3 setup.py install

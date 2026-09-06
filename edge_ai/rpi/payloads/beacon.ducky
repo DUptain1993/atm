@@ -1,0 +1,4 @@
+# Optional periodic beacon (enable in manifest)
+DELAY 200
+STRING echo rpi-agent-alive
+ENTER

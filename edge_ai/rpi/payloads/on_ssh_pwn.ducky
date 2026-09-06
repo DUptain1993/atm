@@ -1,0 +1,4 @@
+# Fired when ssh_defaults module wins
+DELAY 1000
+STRING echo ssh-pwned
+ENTER

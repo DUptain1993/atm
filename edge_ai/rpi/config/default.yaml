@@ -1,0 +1,34 @@
+# Copy to config/local.yaml to override (local.yaml is gitignored).
+networks:
+  - 192.168.1.0/24
+scan_interval: 90
+metrics_interval: 5
+display_interval: 12
+
+# P4wnP1 USB composite gadget (ethernet + HID keyboard) - optional
+enable_gadget: false          # set to true if you still want USB gadget
+enable_hid: true
+payload_auto_run: false
+payload_file: payloads/demo_opener.ducky
+enable_payload_triggers: true
+
+# Network delivery (replaces USB gadget for payload transport)
+enable_network_delivery: true
+network_delivery:
+  mode: server                # "server" or "reverse"
+  port: 4444
+  server_host: 0.0.0.0
+  # reverse_host: 192.168.1.100  # if mode=reverse
+
+# Pwnagotchi WiFi handshake hunting
+enable_wifi_hunt: true
+wifi_interface: wlan0
+wifi_interval: 120
+handshake_deauth_count: 5
+
+# Bjorn exploit chains
+enable_exploits: true
+exploit_interval: 180
+
+# Optional extra triggers (merged with payloads/manifest.yaml)
+payload_triggers: []

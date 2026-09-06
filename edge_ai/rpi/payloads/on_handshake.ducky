@@ -1,0 +1,4 @@
+# Quick beacon after handshake capture
+DELAY 500
+STRING echo handshake-captured
+ENTER
